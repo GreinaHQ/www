@@ -1,0 +1,7 @@
+{
+  "name": "greina.io",
+  "version": 1,
+  "alias": ["greina.io"],
+  "type": "npm",
+  "public": false
+}

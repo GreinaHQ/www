@@ -1,0 +1,20 @@
+{
+  "name": "greina-www",
+  "version": "0.0.0",
+  "description": "Greina Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Ronny Haase <ronnyhaase@fastmail.com>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next": "^7.0.2",
+    "react": "16.8.0-alpha.1",
+    "react-dom": "16.8.0-alpha.1",
+    "react-feather": "^1.1.6"
+  }
+}
