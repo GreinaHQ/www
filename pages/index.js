@@ -8,9 +8,13 @@ const HtmlHeader = () => (
   <Head>
     <meta charSet="utf-8" />
     <title>Greina - We &hearts; FinTech</title>
-    <meta name="description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! So we write and tweet about them." />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter and follow us on Twitter @GreinaHQ" />
+    <meta name="og:title" content="Greina - We &hearts; FinTech" />
+    <meta name="og:description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter and follow us on Twitter @GreinaHQ" />
+    <meta name="og:url" content="https://greina.io" />
+    <meta name="og:image" content="/static/images/preview.jpg" />
     <link rel="shortcut icon" type="image/ico" href="/static/images/favicon.ico"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
   </Head>
 )
