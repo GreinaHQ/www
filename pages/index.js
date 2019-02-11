@@ -13,6 +13,11 @@ const HtmlHeader = () => (
     <meta name="og:description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter and follow us on Twitter @GreinaHQ" />
     <meta name="og:url" content="https://greina.io" />
     <meta name="og:image" content="/static/images/preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image"></meta>
+    <meta name="twitter:description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter!"></meta>
+    <meta name="twitter:image" content="https://greina.io/static/images/preview.jpg"></meta>
+    <meta name="twitter:image:alt" content="Greina - We ❤ FinTech - Join our newsletter!"></meta>
+    <meta name="twitter:site" content="@GreinaHQ"></meta>
     <link rel="shortcut icon" type="image/ico" href="/static/images/favicon.ico"></link>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
