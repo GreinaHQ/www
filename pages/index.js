@@ -9,10 +9,10 @@ const HtmlHeader = () => (
     <meta charSet="utf-8" />
     <title>Greina - We &hearts; FinTech</title>
     <meta name="description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter and follow us on Twitter @GreinaHQ" />
-    <meta name="og:title" content="Greina - We &hearts; FinTech" />
-    <meta name="og:description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter and follow us on Twitter @GreinaHQ" />
-    <meta name="og:url" content="https://greina.io" />
-    <meta name="og:image" content="/static/images/preview-1200.jpg" />
+    <meta property="og:title" content="Greina - We &hearts; FinTech" />
+    <meta property="og:description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter and follow us on Twitter @GreinaHQ" />
+    <meta property="og:url" content="https://greina.io" />
+    <meta property="og:image" content="https://greina.io/static/images/preview-1200.jpg" />
     <meta name="twitter:card" content="summary_large_image"></meta>
     <meta name="twitter:description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter!"></meta>
     <meta name="twitter:image" content="https://greina.io/static/images/preview-1200.jpg"></meta>
