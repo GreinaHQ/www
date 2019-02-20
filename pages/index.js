@@ -83,7 +83,11 @@ const Newsletter = () => (
             />
           </div>
         </div>
-        <div><small>First issue coming soon!</small></div>
+        <div>
+          <a href="https://mailchi.mp/25ddd11edab1/fintech-monthly-1">Latest issue (1)</a> |{' '}
+          <a href="https://us20.campaign-archive.com/home/?u=efa9b5936be6ede9d0f643b25&id=062b48ad54">Archives</a> |{' '}
+          <a href="https://us20.campaign-archive.com/feed?u=efa9b5936be6ede9d0f643b25&id=062b48ad54">RSS</a>
+        </div>
       </div>
     </form>
   </div>
