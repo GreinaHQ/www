@@ -49,9 +49,9 @@ const NewsletterSignup = () => (
           </div>
         </div>
         <div>
-          <a href="https://mailchi.mp/25ddd11edab1/fintech-monthly-1">Latest issue (1)</a> |{' '}
-          <a href="https://us20.campaign-archive.com/home/?u=efa9b5936be6ede9d0f643b25&id=062b48ad54">Archives</a> |{' '}
-          <a href="https://us20.campaign-archive.com/feed?u=efa9b5936be6ede9d0f643b25&id=062b48ad54">RSS</a>
+          <a href="/newsletter/issue/latest">Latest issue (1)</a> |{' '}
+          <a href="/newsletter/archives">Archives</a> |{' '}
+          <a href="/newsletter/rss">RSS</a>
         </div>
       </div>
     </form>

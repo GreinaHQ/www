@@ -1,6 +1,6 @@
 import { getClientIp } from 'request-ip'
 
-import { pageView } from '../services/ga'
+import { pageView } from '../../services/ga'
 
 const NewsletterPage = () => null
 
