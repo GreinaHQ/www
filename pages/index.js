@@ -1,46 +1,11 @@
-import Head from 'next/head'
 import React, { Fragment } from 'react'
 import IconTwitter from 'react-feather/dist/icons/twitter'
 
+import { HtmlHeader, Tracking } from '../components'
+
 import '../styles.css'
 
-const HtmlHeader = () => (
-  <Head>
-    <meta charSet="utf-8" />
-    <title>Greina - We &hearts; FinTech</title>
-    <meta name="description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter and follow us on Twitter @GreinaHQ" />
-    <meta property="og:title" content="Greina - We &hearts; FinTech" />
-    <meta property="og:description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter and follow us on Twitter @GreinaHQ" />
-    <meta property="og:url" content="https://greina.io" />
-    <meta property="og:image" content="https://greina.io/static/images/preview-1200.jpg" />
-    <meta name="twitter:card" content="summary_large_image"></meta>
-    <meta name="twitter:description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter!"></meta>
-    <meta name="twitter:image" content="https://greina.io/static/images/preview-1200.jpg"></meta>
-    <meta name="twitter:image:alt" content="Greina - We ❤ FinTech - Join our newsletter!"></meta>
-    <meta name="twitter:site" content="@GreinaHQ"></meta>
-    <link rel="shortcut icon" type="image/ico" href="/static/images/favicon.ico"></link>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
-  </Head>
-)
-
-const Tracking = ({ doNotTrack }) => (
-  <Fragment>
-    <script dangerouslySetInnerHTML={{ __html: `
-      document.documentElement.lang = 'en'
-      ${doNotTrack ? "window['ga-disable-UA-24905421-3'] = true;" : ''}
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-24905421-3', {
-        storeGac: false,
-      });
-      ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview');
-    ` }} />
-    <script async src="https://www.google-analytics.com/analytics.js" />
-  </Fragment>
-)
-
-const Newsletter = () => (
+const NewsletterSignup = () => (
   <div id="mc_embed_signup">
     <form
       action="https://greina.us20.list-manage.com/subscribe/post?u=efa9b5936be6ede9d0f643b25&amp;id=062b48ad54"
@@ -93,7 +58,7 @@ const Newsletter = () => (
   </div>
 )
 
-const HomePage = ({ doNotTrack }) => (
+const HomePage = ({ doNotTrack, noPageView }) => (
   <Fragment>
     <HtmlHeader />
     <div className="a-fadein container u-center">
@@ -104,7 +69,7 @@ const HomePage = ({ doNotTrack }) => (
       <p>
         We love great Banking, Money Management and Investing, naturally we like FinTech Startups!
       </p>
-      <Newsletter />
+      <NewsletterSignup />
       <p className="u-bold u-mb-0 u-p-sm">
         Follow us<br />
         <a href="https://twitter.com/GreinaHQ">
@@ -120,13 +85,15 @@ const HomePage = ({ doNotTrack }) => (
         If you enabled Do Not Track, you won't get tracked at all.
       </p>
     </div>
-    <Tracking doNotTrack={doNotTrack} />
+    <Tracking doNotTrack={doNotTrack} noPageView={noPageView} />
   </Fragment>
 )
 
 HomePage.getInitialProps = ({ req }) => {
   const doNotTrack = (req && req.headers['dnt'] === '1') || false
-  return { doNotTrack }
+  const parsedUrl = require('url').parse(req.url)
+  const noPageView = require('querystring').parse(parsedUrl.query).ref === '/newsletter'
+  return { doNotTrack, noPageView }
 }
 
 export default HomePage

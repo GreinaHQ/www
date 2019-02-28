@@ -2,19 +2,27 @@
   "name": "greina-www",
   "version": "1.0.0",
   "description": "Greina Website",
+  "author": "Ronny Haase <ronnyhaase@fastmail.com>",
+  "license": "GPL-3.0",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start"
   },
-  "author": "Ronny Haase <ronnyhaase@fastmail.com>",
-  "license": "GPL-3.0",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "got": "^9.6.0",
     "next": "^7.0.2",
     "react": "16.8.0-alpha.1",
     "react-dom": "16.8.0-alpha.1",
-    "react-feather": "^1.1.6"
+    "react-feather": "^1.1.6",
+    "request-ip": "^2.1.3",
+    "uuid": "^3.3.2"
+  },
+  "browser": {
+    "got": false,
+    "request-ip": false,
+    "uuid": false
   }
 }
