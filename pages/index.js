@@ -14,6 +14,7 @@ const NewsletterSignup = () => (
       method="post"
       name="mc-embedded-subscribe-form"
       noValidate
+      onSubmit={() => ga('send', 'event', { eventAction: 'submit', eventCategory: 'Form', eventLabel: 'Newsletter' })}
       target="_blank"
     >
       <div id="mc_embed_signup_scroll">
@@ -72,13 +73,17 @@ const HomePage = ({ doNotTrack, noPageView }) => (
       <NewsletterSignup />
       <p className="u-bold u-mb-0 u-p-sm">
         Follow us<br />
-        <a href="https://twitter.com/GreinaHQ">
+        <a href="https://twitter.com/GreinaHQ" onClick={() => ga('send', 'event', { eventAction: 'click', eventCategory: 'Outbound Link', eventLabel: 'https://twitter.com/GreinaHQ' })}>
           <IconTwitter size={48} />
           <span className="sr-only">Link to Twitter profile</span>
         </a>
       </p>
       <small className="u-block u-p-sm">
-        Copyright &copy; <a href="https://ronnyhaase.com">Ronny Haase</a>, 2019
+        Copyright &copy;
+        <a href="https://ronnyhaase.com" onClick={() => ga('send', 'event', { eventAction: 'click', eventCategory: 'Outbound Link', eventLabel: 'https://ronnyhaase.com' })}>
+          {' '}Ronny Haase
+        </a>
+        , 2019
       </small>
       <p className="u-smaller">
         This site uses Google Analytics, without cookies and anonymizing your IP.<br />
