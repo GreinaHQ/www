@@ -1,10 +1,10 @@
 import { getClientIp } from 'request-ip'
 
-import { pageView } from '../../services/ga'
+import { pageView } from '../../../services/ga'
 
-const NewsletterRssPage = () => null
+const NewsletterIssue2Page = () => null
 
-NewsletterRssPage.getInitialProps = async ({ req, res }) => {
+NewsletterIssue2Page.getInitialProps = async ({ req, res }) => {
   const doNotTrack = (req && req.headers['dnt'] === '1') || false
 
   if (!doNotTrack) {
@@ -15,8 +15,8 @@ NewsletterRssPage.getInitialProps = async ({ req, res }) => {
       req.headers['referer'],
     )
   }
-  res.writeHead(307, { 'Location': 'https://us20.campaign-archive.com/feed?u=efa9b5936be6ede9d0f643b25&id=062b48ad54' })
+  res.writeHead(307, { 'Location': 'https://mailchi.mp/483ec5290ff8/fintech-monthly-2' })
   res.end()
 }
 
-export default NewsletterRssPage
+export default NewsletterIssue2Page

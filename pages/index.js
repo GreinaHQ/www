@@ -50,7 +50,7 @@ const NewsletterSignup = () => (
           </div>
         </div>
         <div>
-          <a href="/newsletter/issue/latest">Latest issue (1)</a> |{' '}
+          <a href="/newsletter/issue/latest">Latest issue (#2)</a> |{' '}
           <a href="/newsletter/archives">Archives</a> |{' '}
           <a href="/newsletter/rss">RSS</a>
         </div>

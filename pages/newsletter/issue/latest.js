@@ -9,13 +9,13 @@ NewsletterIssueLatestPage.getInitialProps = async ({ req, res }) => {
 
   if (!doNotTrack) {
     await pageView(
-      'https://greina.io/newsletter/issue/latest',
+      `https://greina.io${req.url}`,
       getClientIp(req),
       req.headers['user-agent'],
       req.headers['referer'],
     )
   }
-  res.writeHead(307, { 'Location': 'https://mailchi.mp/25ddd11edab1/fintech-monthly-1' })
+  res.writeHead(307, { 'Location': 'https://mailchi.mp/483ec5290ff8/fintech-monthly-2' })
   res.end()
 }
 

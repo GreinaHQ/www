@@ -9,7 +9,7 @@ NewsletterIssue1Page.getInitialProps = async ({ req, res }) => {
 
   if (!doNotTrack) {
     await pageView(
-      'https://greina.io/newsletter/issue/1',
+      `https://greina.io${req.url}`,
       getClientIp(req),
       req.headers['user-agent'],
       req.headers['referer'],
