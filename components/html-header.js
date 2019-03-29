@@ -1,19 +1,33 @@
 import Head from 'next/head'
 import React from 'react'
 
-const HtmlHeader = () => (
+import {
+  defaultDescription,
+  defaultPreviewImageAlt,
+  defaultPreviewImageUrl,
+  defaultTitle,
+  defaultUrl,
+} from '../config'
+
+const HtmlHeader = ({
+  description = defaultDescription,
+  previewImageUrl = defaultPreviewImageUrl,
+  previewImageAlt = defaultPreviewImageAlt,
+  title = defaultTitle,
+  url = defaultUrl,
+}) => (
   <Head>
     <meta charSet="utf-8" />
-    <title>Greina - We &hearts; FinTech</title>
-    <meta name="description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter and follow us on Twitter @GreinaHQ" />
-    <meta property="og:title" content="Greina - We &hearts; FinTech" />
-    <meta property="og:description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter and follow us on Twitter @GreinaHQ" />
-    <meta property="og:url" content="https://greina.io" />
-    <meta property="og:image" content="https://greina.io/static/images/preview-1200.jpg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={previewImageUrl} />
     <meta name="twitter:card" content="summary_large_image"></meta>
-    <meta name="twitter:description" content="We love great Banking, Money Management and Investing, naturally we like FinTech Startups! Join our newsletter!"></meta>
-    <meta name="twitter:image" content="https://greina.io/static/images/preview-1200.jpg"></meta>
-    <meta name="twitter:image:alt" content="Greina - We ❤ FinTech - Join our newsletter!"></meta>
+    <meta name="twitter:description" content={description}></meta>
+    <meta name="twitter:image" content={previewImageUrl}></meta>
+    <meta name="twitter:image:alt" content={previewImageAlt}></meta>
     <meta name="twitter:site" content="@GreinaHQ"></meta>
     <link rel="shortcut icon" type="image/ico" href="/static/images/favicon.ico"></link>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
