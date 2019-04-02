@@ -62,7 +62,7 @@ const NewsletterSignup = () => (
 const HomePage = ({ doNotTrack, noPageView }) => (
   <Fragment>
     <HtmlHeader />
-    <div className="a-fadein container u-center">
+    <div className="Container a-fadein u-center">
       <h1>Greina</h1>
       <p>
         <img alt="Greina Logo" className="u-responsive" src="/static/images/logo.png" />

@@ -90,7 +90,6 @@ input[type="radio"] {
   padding: 0;
 }
 
-
 input[type="date"],
 input[type="month"]
 input[type="datetime-local"],
@@ -126,6 +125,85 @@ a:focus, input:focus {
   outline-width: 2px;
 }
 
+/* Box Model */
+
+.u-block {
+  display: block;
+}
+
+.u-mb-0 { margin-bottom: 0; }
+.u-mr-xs { margin-right: .5rem; }
+.u-p-sm { padding: 1rem; }
+.u-p-lg { padding: 2rem; }
+.u-py-sm { padding-top: 1rem; padding-bottom: 1rem; }
+
+.u-bordered {
+  border: 1px solid #707070;
+}
+
+.u-rounded-sm {
+  border-radius: 1rem;
+}
+
+.u-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.u-flex-col-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.u-flex-row-center-stretch {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.u-flex-row-left-center {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+/* Text */
+
+.u-bold {
+  font-weight: 700;
+}
+
+.u-center {
+  text-align: center;
+}
+
+.u-smaller {
+  font-size: 0.75rem;
+}
+
+.u-bigger {
+  font-size: 1.25rem;
+}
+
+/* Background */
+
+.u-bg-gradient-tb {
+  background: linear-gradient(to bottom, #f3f6f9, #ffffff);
+}
+
+.u-bg-gray {
+  background-color: #f3f6f9;
+}
+
+/* Animations */
+
 @keyframes fadein {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -139,84 +217,28 @@ a:focus, input:focus {
   opacity: 0;
 }
 
-.u-bg-gray {
-  background-color: #f3f6f9;
-}
+/* Components */
 
-.u-block {
-  display: block;
-}
-
-.u-bold {
-  font-weight: 700;
-}
-
-.u-center {
-  text-align: center;
-}
-
-.u-flex-row-center {
-  display: flex;
-  align-items: stretch;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.u-mb-0 {
-  margin-bottom: 0;
-}
-
-.u-p-sm {
-  padding: 1rem;
-}
-
-.u-p-sm {
-  padding: 1rem;
-}
-
-.u-py-sm {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.u-p-lg {
-  padding: 2rem;
-}
-
-.u-responsive {
-  max-width: 100%;
-  height: auto;
-}
-
-.u-rounded-sm {
-  border-radius: 1rem;
-}
-
-.u-smaller {
-  font-size: 0.75rem;
-}
-
-.btn {
+.Button {
   padding: 0.5rem;
   border: 1px solid #404040;
   background: #404040;
   color: #fff;
 }
 
-.container {
+.Container {
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
-@media (min-width: 576px) { .container { max-width: 540px; } }
-@media (min-width: 768px) { .container { max-width: 720px; } }
-@media (min-width: 992px) { .container { max-width: 960px; } }
-@media (min-width: 1200px) { .container { max-width: 1140px; } }
+@media (min-width: 576px) { .Container { max-width: 540px; } }
+@media (min-width: 768px) { .Container { max-width: 720px; } }
+@media (min-width: 992px) { .Container { max-width: 960px; } }
+@media (min-width: 1200px) { .Container { max-width: 1140px; } }
 
-.container-fluid {
+.Container-fluid {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -224,7 +246,7 @@ a:focus, input:focus {
   padding-right: 1rem;
 }
 
-.input {
+.Input {
   border: 1px solid #404040;
   border-radius: 0;
   padding: 0.5rem;
