@@ -10,6 +10,7 @@ const Tracking = ({ doNotTrack }) => (
         storeGac: false,
       });
       ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
     ` }} />
     <script async src="https://www.google-analytics.com/analytics.js" />
   </Fragment>
