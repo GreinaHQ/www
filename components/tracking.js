@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-const Tracking = ({ doNotTrack, noPageView }) => (
+const Tracking = ({ doNotTrack }) => (
   <Fragment>
     <script dangerouslySetInnerHTML={{ __html: `
       document.documentElement.lang = 'en';
@@ -10,11 +10,6 @@ const Tracking = ({ doNotTrack, noPageView }) => (
         storeGac: false,
       });
       ga('set', 'anonymizeIp', true);
-      ${noPageView ?
-        `if (window.history.pushState) {
-          const newurl = window.location.protocol + '//' + window.location.host + window.location.pathname;
-          window.history.replaceState({ path: newurl }, '', newurl);
-        }` : "ga('send', 'pageview');"}
     ` }} />
     <script async src="https://www.google-analytics.com/analytics.js" />
   </Fragment>

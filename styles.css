@@ -272,3 +272,17 @@ a:focus, input:focus {
   clip: auto;
   white-space: normal;
 }
+
+.Header {
+  box-sizing: content-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  padding: .5rem 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .25);
+  background-color: #fff;
+}
+
+.withHeader { padding-top: 3rem; }

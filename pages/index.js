@@ -4,7 +4,7 @@ import { Footer, HtmlHeader, NewsletterSignup, Tracking } from '../components'
 
 import '../styles.css'
 
-const HomePage = ({ doNotTrack, noPageView }) => (
+const HomePage = ({ doNotTrack }) => (
   <Fragment>
     <HtmlHeader />
     <div className="Container a-fadein u-center">
@@ -18,15 +18,13 @@ const HomePage = ({ doNotTrack, noPageView }) => (
       <NewsletterSignup />
       <Footer />
     </div>
-    <Tracking doNotTrack={doNotTrack} noPageView={noPageView} />
+    <Tracking doNotTrack={doNotTrack} />
   </Fragment>
 )
 
 HomePage.getInitialProps = ({ req }) => {
   const doNotTrack = (req && req.headers['dnt'] === '1') || false
-  const parsedUrl = require('url').parse(req.url)
-  const noPageView = require('querystring').parse(parsedUrl.query).ref === '/newsletter'
-  return { doNotTrack, noPageView }
+  return { doNotTrack }
 }
 
 export default HomePage
