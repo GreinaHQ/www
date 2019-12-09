@@ -1,6 +1,0 @@
-export { default as Footer } from './footer'
-export { default as Header } from './header'
-export { default as HtmlHeader } from './html-header'
-export { default as NewsletterSignup } from './newsletter-signup'
-export { default as SlideShow } from './slide-show'
-export { default as Tracking } from './tracking'

@@ -3,26 +3,26 @@
   "version": "1.1.1",
   "description": "Greina Website",
   "author": "Ronny Haase <ronnyhaase@fastmail.com>",
-  "license": "GPL-3.0",
-  "main": "index.js",
+  "license": "GPL-3.0-or-later",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "node scripts/css; node scripts/html; node scripts/static",
+    "dev": "concurrently \"npm run serve\" \"npm run watch\"",
+    "serve": "lite-server --baseDir=dist",
+    "watch": "concurrently \"npm run watch:css\" \"npm run watch:html\" \"npm run watch:static\"",
+    "watch:css": "chokidar \"styles/**/*.scss\" -c \"node scripts/css\"",
+    "watch:html": "chokidar \"templates/**/*.pug\" -c \"node scripts/html\"",
+    "watch:static": "chokidar \"static/**/*\" -c \"node scripts/static\""
   },
-  "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "got": "^9.6.0",
-    "next": "^8.0.3",
-    "react": "16.8.4",
-    "react-dom": "16.8.4",
-    "react-feather": "^1.1.6",
-    "request-ip": "^2.1.3",
-    "uuid": "^3.3.2"
-  },
-  "browser": {
-    "got": false,
-    "request-ip": false,
-    "uuid": false
+  "devDependencies": {
+    "autoprefixer": "^9.7.2",
+    "chokidar-cli": "^2.1.0",
+    "concurrently": "^5.0.0",
+    "cssnano": "^4.1.10",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.6",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.13.0",
+    "postcss": "^7.0.23",
+    "pug": "^2.0.4"
   }
 }
