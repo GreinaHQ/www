@@ -1,7 +1,28 @@
 {
   "name": "greina.io",
-  "version": 1,
   "alias": ["greina.io"],
-  "type": "npm",
-  "public": false
+  "type": "static",
+  "public": false,
+  "static": {
+    "headers": [
+      {
+        "source": "**/*.@(css|js|svg)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
+          }
+        ]
+      }
+    ]
+  }
 }
