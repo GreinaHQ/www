@@ -14,15 +14,15 @@
     "watch:static": "chokidar \"static/**/*\" -c \"node scripts/static\""
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.2",
+    "autoprefixer": "^9.7.4",
     "chokidar-cli": "^2.1.0",
-    "concurrently": "^5.0.0",
+    "concurrently": "^5.1.0",
     "cssnano": "^4.1.10",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "lite-server": "^2.5.4",
-    "node-sass": "^4.13.0",
-    "postcss": "^7.0.23",
+    "node-sass": "^4.13.1",
+    "postcss": "^7.0.27",
     "pug": "^2.0.4"
   }
 }
