@@ -21,7 +21,7 @@
     "fs-extra": "^9.1.0",
     "glob": "^7.1.6",
     "lite-server": "^2.6.1",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "postcss": "^8.2.10",
     "pug": "^3.0.2"
   }
