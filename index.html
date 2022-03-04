@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Greina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff linear-gradient(to bottom, #f3f6f9, #ffffff);
+  color: #707070;
+  font-family: sans-serif;
+}
+h1 {
+  text-align: center;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.FadeIn {
+  animation-name: fadein;
+  animation-delay: .5s;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+    </style>
+  </head>
+  <body>
+    <div class="FadeIn">
+      <img class="ImgResponsive" alt="Greina Logo" src="/static/images/logo.svg">
+      <h1>Greina</h1>
+  </body>
+</html>
