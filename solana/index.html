@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Greina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff linear-gradient(to bottom, #f3f6f9, #ffffff);
+  color: #707070;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+h1 {
+  text-align: center;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.FadeIn {
+  animation-name: fadein;
+  animation-delay: .5s;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.Button {
+  background-color: #C026D3;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,.35);
+  color: #fff;
+  display: inline-block;
+  padding: 16px 32px;
+  margin: 8px 0;
+  text-decoration: none;
+}
+    </style>
+  </head>
+  <body>
+    <div class="FadeIn">
+      <img class="ImgResponsive" alt="Greina Logo" src="/static/images/logo.svg">
+      <h1>Greina</h1>
+      <div class="text-center">
+        <div>Looking for <strong>Solplorer</strong>?</div>
+        <div>
+          <a class="Button" href="https://solplorer.org">www.solplorer.org</a>
+        </div>
+      </div>
+  </body>
+</html>
